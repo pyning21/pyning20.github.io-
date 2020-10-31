@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/pyning21.github.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pyning21.github.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pyning21.github.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/pyning21.github.io/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/pyning21.github.io/css/main.css">
+
+
+<link rel="stylesheet" href="/pyning21.github.io/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pyning21.github.io","root":"/pyning21.github.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="​    最近几天，小岛的天气算不上可爱：若是早晨被和暖的阳光欺骗，午后突然的冷气团会让人了解什么叫做自然的残酷。放学的少男少女们裹紧校服外套，急匆匆跑在通学路上。一片飞奔跳跃的春季校服之中，零星几件冬季外套格外显眼。 ​        往常因迟迟未换掉笨拙冬装而遭打趣身体虚弱的他们，意外成为整座学校最有余裕的人。身旁抱住他们取暖的友人，让他们看起来，像是风暴海中诺亚的小船。 ​        与">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pi">
+<meta property="og:url" content="https://pyning21.github.io/2020/07/21/Pi/index.html">
+<meta property="og:site_name" content="Nemophila">
+<meta property="og:description" content="​    最近几天，小岛的天气算不上可爱：若是早晨被和暖的阳光欺骗，午后突然的冷气团会让人了解什么叫做自然的残酷。放学的少男少女们裹紧校服外套，急匆匆跑在通学路上。一片飞奔跳跃的春季校服之中，零星几件冬季外套格外显眼。 ​        往常因迟迟未换掉笨拙冬装而遭打趣身体虚弱的他们，意外成为整座学校最有余裕的人。身旁抱住他们取暖的友人，让他们看起来，像是风暴海中诺亚的小船。 ​        与">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-21T14:05:06.000Z">
+<meta property="article:modified_time" content="2020-09-04T14:32:08.000Z">
+<meta property="article:author" content="sylvia_0n0">
+<meta property="article:tag" content="jolshin">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://pyning21.github.io/2020/07/21/Pi/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Pi | Nemophila</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/pyning21.github.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nemophila</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/pyning21.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/pyning21.github.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pyning21.github.io/2020/07/21/Pi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/pyning21.github.io/images/avatar.gif">
+      <meta itemprop="name" content="sylvia_0n0">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nemophila">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Pi
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-07-21 22:05:06" itemprop="dateCreated datePublished" datetime="2020-07-21T22:05:06+08:00">2020-07-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-04 22:32:08" itemprop="dateModified" datetime="2020-09-04T22:32:08+08:00">2020-09-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/pyning21.github.io/categories/fanfiction/" itemprop="url" rel="index"><span itemprop="name">fanfiction</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/pyning21.github.io/categories/fanfiction/jolshin/" itemprop="url" rel="index"><span itemprop="name">jolshin</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>​    最近几天，小岛的天气算不上可爱：若是早晨被和暖的阳光欺骗，午后突然的冷气团会让人了解什么叫做自然的残酷。放学的少男少女们裹紧校服外套，急匆匆跑在通学路上。一片飞奔跳跃的春季校服之中，零星几件冬季外套格外显眼。</p>
+<p>​        往常因迟迟未换掉笨拙冬装而遭打趣身体虚弱的他们，意外成为整座学校最有余裕的人。身旁抱住他们取暖的友人，让他们看起来，像是风暴海中诺亚的小船。</p>
+<p>​        与此同时，陈信宏待在自己的录音室。公司把原计划的休假部分调整到节日前，他想趁着这段清净懒散的时间，重新归档几月来过分忙碌而疏于整理的手稿。</p>
+<a id="more"></a>
+
+<p>​        重理一遍自己的思路是件蛮有趣的事情，稿纸空白处“布朗家的烤肉定食很好吃”之类的随手记录读来让人愉悦，但分类索引文件仍然枯燥无趣。</p>
+<p>​        说到底只是把写过的纸张拿出来，换个地方放回去的重复动作而已。</p>
+<p>​        为了增加些趣味，陈信宏把三个月前托助理抢下的乐高积木带进录音室，大剌剌摊在地毯上，不必担心路过的谁倒霉中招。他仿造学生时代的课业安排，暗自定下约定：坚持四十分钟，就允许丢掉纸片去拼一点局部。</p>
+<p>​        当然，今天他有比拼装乐高更治愈心灵的“课间十分钟”——</p>
+<p>​        蔡依林睡在他新搬进录音室的懒人沙发里，靠近鼻子的毛绒毯因富含水汽的吐息变得润泽，呈现中灰色。 她睡得不稳，不出一会儿半个身体便沿着变换的豆袋滑到地板上。</p>
+<p>​        陈信宏边工作边分心注意着。</p>
+<p>​        当蔡依林的头顶也盖进毯子里，在他看来整个人活像掉进海洋球的小猫时，他就可以放下稿纸走去抱起她，啪啪拍平豆袋后再抱回去，顺势躺一会儿被窝。</p>
+<p>​        若是公主醒着，他会得到满满一个熊抱，内含夹腿、被咯吱痒、摸耳朵等等系列“动手动脚”；</p>
+<p>​        若是睡着，他便打开手机，记录她呼呼的睡梦或是拍摄照片，漂亮的挑选出来发给本人，“可爱”的偷偷留起来自己看。</p>
+<p>​        大概是连年几场大病，这个季节的蔡依林让他提前晓得什么叫做“家里长辈的紧张”。</p>
+<p>​        认真比较起体质，陈信宏自是比不过养生家蔡依林。然而体型差异到底在那里，脂肪可是人类防御病痛的护盾之一。他们拥抱时，怀里窄瘦的肩膀总是提醒陈信宏“身体健康”这个严肃敏感，带有一点古板的话题。</p>
+<p>​        陈信宏不喜欢失去。</p>
+<p>​        今天早上，他们例行早安通话。借宿蔡依林家的友人在画面外吵闹着，说要把蔡依林送来“治愈”，最后被抹了满脸洗乳液报复。陈信宏自是乐意的。两部车在沿途某地下车库碰头时，友人手舞足蹈跟他描述蔡小姐昨晚如何失眠，如何焦躁地捶了一夜枕头，又如何嘴硬拒绝由她这个闺蜜来提供爱的抱抱。</p>
+<p>​        他坐后座听得兴致盎然。</p>
+<p>​        故事女主角佯装生气下车，梆梆敲他停在隔壁位的车子。路上，女主角同学皱鼻子喝水，啜嚅着解释只是近几日气血不顺，叫陈信宏不要听友人编故事：</p>
+<p>​        “相信我哦——！”</p>
+<p>​        她借着红灯，歪头去贴陈信宏放在挡位上的手臂。大外套随动作簌簌作响。陈信宏注视窗玻璃倒影里那张脸：蔡依林今天没有上妆，头发被帽子压得乱糟糟，显得整个人瘦削苍白，没什么精神气力。他低头亲亲后脑勺的帽子调节扣，铜扣冰得人全身起疙瘩，顿时老伯伯一样感叹起温暖珍贵来。</p>
+<p>​        “好，听你的。”</p>
+<p>​        ＼</p>
+<p>​         “干嘛一直看我…东西整理完了吗？”说话人睡得松弛，抬手指挥陈信宏开灯。</p>
+<p>​        “还没。晚饭有没有想吃的东西，我下去热车子？”</p>
+<p>​        她撇撇嘴，仰面滚下地板，嘴里嘟囔好冷穿衣服好麻烦，不想出门。于是两人就着一部手机研究起外送清单。炸鸡、烤排、水煮蔬菜、饭后小食、水果，热汤和汽水。确认订单时蔡依林笑嘻嘻踢了陈信宏膝盖，用卡通语调评价“好丰盛哦”。</p>
+<p>​        嗯，丰盛，每一年都会。陈信宏故意引申开她话里的意思。蔡依林倒映了手机菜单的双眼，忽闪忽闪凝视他。</p>
+<p>​        年纪正在不受控制地增加，无论精神再怎样保养保持，这具肉体终究会像使用多年的洗衣机一样，渐渐出现各种各样的小毛病。他不想，等到坏到已经无法工作那一天后悔，“噢，以前我应该……”。</p>
+<p>​        没有地方可以维修退换残烛肉体，灵魂是耶稣也不行。</p>
+<p>​        正因为这样，习惯现下安静生活的陈信宏，内心那间小房子偶尔生出对未来的恐惧。他害怕几年之后，自己的人际圈也开始走上“单向通行道”。</p>
+<p>​        人总是这样，一夕温暖，就开始贪心永远。</p>
+<p>​        恢复精神的蔡依林手脚并用跨上他肚子，笑眯眯冲脸来。男友陈信宏当然读得懂什么意思，乖乖闭上眼睛感受周围细微的空气流动，猜测恋人甜蜜的亲吻将会印在哪一侧嘴唇。</p>
+<p>​        “啊啊啊，觉睡太久忘记惹。阿信出门多买一件裤子！”</p>
+<p>​        什么嘛。陈信宏看着慌张冲向卫生间的蔡依林，多少因为错失珍贵的亲密接触气鼓鼓。可他还得跟上那脚步，给他总忘记东西的小小只坏家伙拿去卫生用品。</p>
+<p>​        冒失鬼系起苹果头瘪嘴装乖，被揉脸也仅仅揽着他腰耍可爱。陈信宏没出息地傻笑起来，顺便补上错过的亲吻。</p>
+<p>​        啊就真的很可爱嘛，他也是很正常的人类。</p>
+<p>​        ＼</p>
+<p>​         买好衣服、取完餐饮，再一次回到今天本该只属于阿信宝贝和亲亲 jolin 的录音室。</p>
+<p>​        本应该。</p>
+<p>​        所以说，坐在他乐高毯子上，按摩双脚眼泪汪汪的那一位不速之客，是想怎样。</p>
+<p>​        陈信宏开门的动作仿佛顺便打开了蔡依林的爆笑开关。她笑得整个人蜷缩成一团，双指按住泪腺极力控制自己声音：</p>
+<p>​        “我提醒过那边不可以坐~客人自己不听话，不是 jolin 的问题。”</p>
+<p>​        “威，你只讲这边有乐高。”周杰伦指指从地毯中排查得到的若干零件，“没想到踩得…笑你个头，同情心一点好吗。主唱大大你说是不是。”</p>
+<p>​        “我啊——老板说今天店里豆芽用光了，汤料换成笋丝，你尝尝看——我就帮亲也帮理啊。”陈信宏忍住笑，把汤点挑出来放在蔡依林面前。</p>
+<p>​        擂台双方，一方是坐在这边被乐高“袭击”，没暖透的外套脱掉也不晓得往哪里放的他本人周杰伦；另一方是看陈信宏面子上替他拿餐具水杯，轻车熟路避开满地障碍物的蔡依林同学。 他觉得阿信讲的“哪一边”好像不剩下什么可争议的地方了。</p>
+<p>​        阿信一坐下便问他是否踩 jolin 尾巴，把他带来的奶茶拎起来，满脸委屈地控诉说：“珍珠，全被吃掉了。全部欸！”</p>
+<p>​        “早上已经喝过一杯，留奶茶给你已经是放过你。”</p>
+<p>​        “明明就是生气了啊。”</p>
+<p>​    “就放了上次我们做的 demo，然后有一点点…” 陈信宏吸一口没有珍珠的珍珠奶茶，等待哥中之哥“嘶——”地找词语形容。 “…分歧？”</p>
+<p>​        jolin 喜欢可能性，热衷化学试验般的表演艺术；杰伦常常被争议，现在变成大家口中的哥中之哥；阿信借用五月天阿信的身份，唱些新的旧的故事和心情。</p>
+<p>​        虽然同为上个世代乐坛脱出的歌手，但各自进入成长期之后，好像就没了新人时期紧密联系的“同期”感，越来越往各自方向飞奔的放射线。</p>
+<p>​        对于听众说不定是好事啦，但陈信宏会记起混沌忙碌的新人时期，即便他们唱着不同曲子，寻求不同的听众，跑唱片行通告偶遇，哪怕满身疲惫地也会好好寒暄，管他穿什么衣服，是什么场合。</p>
+<p>​        结果现在，算是功成名就，颁奖礼后台碰面却失去少年时那一种冲上去大声喊“嘿，最近好吗？”的横行底气。在满满当当、说着“从小听您歌长大”后辈里，渐渐学习沉默。</p>
+<p>​        陈信宏会孤独。</p>
+<p>​        铁达尼号是怎样度过洋底的无望？她有没有担心过，有一天人们将忘却她冰蓝的真实，以为一切仅是玫红色幻想。</p>
+<p>​        被与她相隔几十年的工业机器拍摄时，她能够习惯吗？</p>
+<p>​        被数字专辑围剿殆尽的唱片行，他能够习惯吗？</p>
+<p>​        他好像遗孤。</p>
+<p>​        “压榨陈星翰的劲头跑出来，不是什么大问题。信哥重新切下肉，匀一点出来我们三个人分。”        “我没那么…呃…就是啊，哪有客人没份的道理。”</p>
+<p>​        装肉排的盒子适时地被推到陈信宏面前，“盒后黑手”顺路拉周杰伦下水：“还有啊~我欸，陪吃油炸食品你还难过，这像话吗～”</p>
+<p>​        蔡依林好像越来越擅长接收陈信宏摇乐透般的灵光一闪，反过来敲击陈信宏，提醒他曾经如何允诺会回到她身边。不过举动还是很、十分、非常～笨拙，他的木头小公主。</p>
+<p>​        陈信宏有些憋不住笑。</p>
+<p>​        “再笑就地分尸你哦。”</p>
+<p>​        “那记得叫杰伦帮忙拿去丢，当然要拉他下水啊，盒盒盒。”</p>
+<p>​        “姐最近喜欢斩草除根耶～买一只大袋子。”</p>
+<p>​        “哎呦，小弟我先走一步，帮姐把楼下便利店买空。”</p>
+<p>​        “可是同日死欸，可以吗，好害羞。”陈信宏放下筷子捂鬓角，表情好像第一次出场的偶像剧女主角，侧脸贴在桌板上，捏细声音问：</p>
+<p>​        “姐姐<del>等周五动手好不好。周五纪念日，这样子好像更加浪漫耶</del>”</p>
+<p>​        “爱最大，明白~”</p>
+<p>​        ＼</p>
+<p>​        简餐结束得很晚，小桌和附近地板堆放满几次点下的外卖空盒跟乐色话。</p>
+<p>​        周杰伦和陈信宏埋首录音棚开始新歌的工作，蔡依林跑去研究乐团的吉他和大鼓。不给她找点事情，他们两个担心危险的实验家忍不住冲到电脑前，删改数量大幅超出她忍受限度的音轨。</p>
+<p>​        从里间退出来时，周杰伦见蔡依林把搭在沙发背的腿收了一收，但人还是躺着跟他说话：“结束了？”</p>
+<p>​        “睡着了。我看他也蛮累的。”他没在衣帽架找到自己外套，于是满屋子翻衣服，“看见我外套没？…欸，你腿压那件。”</p>
+<p>​        “真是不好意思，我以为我的。”蔡依林起身探看阿信，经过他时顺路归还了衣服，“哇呜，还真的跟修学游一样睡着了。”</p>
+<p>​        阿信吃饭时候说，大家只看面相的话跟以前学生时代还是差不多。于是他们闲聊到修学旅行，仿佛二十几年摸爬滚打，其实只是活动前趴在课桌上做了一个梦，喜欢的人正在门口等你——</p>
+<p>​        “一觉醒来，诶，毕业了。”    “盒盒盒，就是说啊。”</p>
+<p>​        “送你们回家？”</p>
+<p>​        “这边可以过夜。回去请小心～垃圾可不可以帮忙丢掉，小心下面有人。”</p>
+<p>​        “小弟我呢，保证完成丢垃圾重任。”    “是，拜托小弟。”</p>
+<p>​        夜里一阵雨，他从暖气房出来，冷不丁一个哆嗦。蔡依林找暖贴给他，嫌弃升温迟缓，干脆揭了自己腹带上的暖贴，并陈信宏的长外套，塞进他手里。她躲在门后，像只警惕的雪鼬：</p>
+<p>​        “注意安全，晚安。”    “晚安，回见。”</p>
+<p>​        回到家丢暖贴时，周杰伦才注意到背胶撕掉腹带巴掌大一片地方的毛球，连带厚外套上的碎绒毛也清理了一部分。</p>
+<p>​        蔡依林的保暖腹带，陈信宏的厚外套，他帮忙搬运阿信时露出的保暖衫，还有贯穿了一顿饭的青春回忆。他笑起大家不约而同的“中年气息”。</p>
+<p>​        年少时曾硝烟四起，成长时想各自称王，等需要考虑养生，又突然挤成团吃外卖。就像阿信说的，仿佛相遇在某个珍稀目录里、曾处于同一生态位的孑遗动物。</p>
+<p>​        当然，能够保护一下偶尔想跟老朋友谈谈天的中年人就更好了。</p>
+<p>​        ＼</p>
+<p>​        陈信宏夜里醒了一次，起来脱掉碍事的衣服继续睡。他冷，躺下后埋头往蔡依林怀里蹭。</p>
+<p>​        “好了哦，再动吃掉你。”</p>
+<p>​        “公主喜欢从哪边开始，亲亲喜欢吗？”</p>
+<p>​        蔡依林抱住胸口的毛绒绒脑袋，只亲了额角。她思来想去，决定说给陈信宏听：</p>
+<p>​        “今天生气了。说好陪我整天，现在算怎么一回事。我知道你也没想到，但结果已经这样。下次找时间补给我。”    “好。”</p>
+<p>​        “从以前，只要沾边到周董啊，就很多人很吵…总之烦得我，一听见他就莫名火大跟警惕。所以之后碰面的话，先告诉我。”    “好。”</p>
+<p>​        “正回答我问题的阿信，是五月天主唱，还是陈信宏先生？”</p>
+<p>​        蔡依林也不晓得当时为什么问出口。陈信宏不说话，手在她腰后扣指头。她想不到下一步应该怎么办，只好心里把他当作放大版屋虎，拍抚他后脑安慰。</p>
+<p>​        良久，陈信宏闷闷地叫她再重复刚刚的话：“还想听公主叫一次‘陈先生’。”</p>
+<p>​        她乖乖说，“陈先生”学着她说。蔡依林有些不解，低头看他表情，才猛地明白他在回答刚刚的提问。        “我如果一直听不明白怎么办，准备重复到天亮吗？”    “嗯。所以谢谢jolin公主明白，辛苦了。”</p>
+<p>​        “你也是木头。”    “嗯，很笨。”</p>
+<p>​        晚饭谈到常有周围很空旷、独自一人的孤寂感。蔡依林不清楚陈信宏是因为什么，她没有那么敏感好用的神经，老被姐姐打趣木头脑袋。</p>
+<p>​        她记得前段时间专辑制作困境，她留在下班后的空荡会议间发呆。异国他乡，迷恋冒险的蔡依林也会希望有谁在身边。</p>
+<p>​        屋虎也好，姐姐也好，陈信宏也好。</p>
+<p>​        不晓得那是不是他指的孤单。</p>
+<p>​        “我可能，表达不是很好。”蔡依林推开陈信宏，拉起被子蜷进去，只留头顶在外面，“虽然好像不是我可以插手的事情，但是想阿信，就是、过得轻松一点。”</p>
+<p>​        脸面周围的狭窄空间升温很快，她有些热，却不想出去被窝。陈信宏躺在身边一动不动。她想起之前陪馒头哥壮胆看恐怖片，小家伙睡觉前小心翼翼探查被窝外有没有鬼。</p>
+<p>​        蔡依林也偷偷伸手碰了碰陈信宏，判断由于自己卷了被子导致体表温度下降后，往他身上堆了一半被子。脑袋仍然安全地包起来。</p>
+<p>​        “公主插手了。”他的话里带着笑意，蔡依林没能抽回自己的手，于是棉被防线快速崩溃下来。</p>
+<p>​        “是怕你冻死。不要打岔，好不容易说点感性的东西。”    “抱抱暖和。”陈信宏抱起蔡依林，把她揽在身前。叠在一起的拥抱，让失去的体温渐渐回到身体：“这样就不怕降温了。”</p>
+<p>​        “但降温太多的话，还是要开暖气好吗。”    “哼哼，主唱大人抱起来不暖和吗？”</p>
+<p>​        “怕你感冒。”    “所以是主唱大人抱起来不暖和吗？”</p>
+<p>​        “很暖和～很幸福。那不然，去关掉？”    “好！”</p>
+<p>​        陈信宏哒哒踩拖鞋去关暖气，蔡依林躺在被子里调笑他的睡衣松散不像话，被他用手冰了脖子。小学生战争一触即发。不晓得哪间房室的窗子没有关严实，风经过时拖出长长的尖啸，好像动画片里可怕的骷髅鬼魂。等双方打闹尽兴、协议休战时，被窝已经凉透。</p>
+<p>​        蔡依林怀疑这是陈信宏的计谋，好让她被迫黏住自称“抱起来很暖和”事实也热烘烘的主唱大人。</p>
+<p>​        “晚安～”    “公主晚安。抱紧我噢。”</p>
+<p>​        夜雨来得快，去得也快。而一场雨带走的温度，或许还需要更多时间回升。</p>
+<p>​        ·</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/pyning21.github.io/tags/jolshin/" rel="tag"># jolshin</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/pyning21.github.io/2020/07/10/MagicBlue/" rel="prev" title="Magic Blue">
+      <i class="fa fa-chevron-left"></i> Magic Blue
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/pyning21.github.io/2020/08/04/Sajangnim/" rel="next" title="Sajangnim">
+      Sajangnim <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">sylvia_0n0</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/pyning21.github.io/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sylvia_0n0</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/pyning21.github.io/lib/anime.min.js"></script>
+  <script src="/pyning21.github.io/lib/velocity/velocity.min.js"></script>
+  <script src="/pyning21.github.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/pyning21.github.io/js/utils.js"></script>
+
+<script src="/pyning21.github.io/js/motion.js"></script>
+
+
+<script src="/pyning21.github.io/js/schemes/pisces.js"></script>
+
+
+<script src="/pyning21.github.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
